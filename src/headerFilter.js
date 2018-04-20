@@ -8,11 +8,11 @@ import appConfig from "./config";
 
 class HeaderFilter extends React.PureComponent {
   static propTypes = {
-    isLoadingBids: PropTypes.bool // disabling datepicker while ajax call is in flight
+    isLoading: PropTypes.bool // disabling datepicker while ajax call is in flight
   };
 
   static defaultProps = {
-    isLoadingBids: false
+    isLoading: false
   };
   render() {
     return (
@@ -24,18 +24,16 @@ class HeaderFilter extends React.PureComponent {
             name="fromDate"
             component={DatePickerInput}
             dateFormat={appConfig.dateFormat}
-            disabled={this.props.isLoadingBids}
+            disabled={this.props.isLoading}
           />
         </div>
         <div class="form-group">
           <Field
-            className="date-input"
-            inputClass="form-control"
             label="To"
             name="toDate"
             component={DatePickerInput}
             dateFormat={appConfig.dateFormat}
-            disabled={this.props.isLoadingBids}
+            disabled={this.props.isLoading}
           />
         </div>
       </form>

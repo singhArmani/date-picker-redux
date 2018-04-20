@@ -2,14 +2,13 @@ import React from "react";
 import PropTypes from "prop-types";
 import DatePicker from "react-datepicker";
 import moment from "moment";
-import 'react-datepicker/dist/react-datepicker.css';
+import "react-datepicker/dist/react-datepicker.css";
 export default class DatePickerInput extends React.PureComponent {
   static propTypes = {
     input: PropTypes.object.isRequired,
     disabled: PropTypes.bool,
     label: PropTypes.string,
-    dateFormat: PropTypes.string,
-    className: PropTypes.string // to style datepicker if required
+    dateFormat: PropTypes.string
   };
 
   static defaultProps = {
@@ -40,6 +39,7 @@ export default class DatePickerInput extends React.PureComponent {
           selected={this.state.startDate}
           onChange={this.handleChange}
           dateFormat={this.props.dateFormat}
+          disabled={this.props.disabled}
         />
       </React.Fragment>
     );
