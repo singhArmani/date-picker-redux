@@ -1,11 +1,13 @@
 import React from "react";
 import { render } from "react-dom";
 import { Provider } from "react-redux";
+import Alert from "react-s-alert";
 
 import { createStore, applyMiddleware, combineReducers } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 
-import HeaderFilter from "./headerFilter";
+import HeaderFilter from "./component/headerFilter";
+import FileUploader from "./component/fileUploader";
 import { reducer as formReducer } from "redux-form";
 
 const reducers = combineReducers({
@@ -17,8 +19,12 @@ let store = createStore(reducers, composeWithDevTools({})());
 // isLoading would an ajax call request
 const App = () => (
   <div>
-    <HeaderFilter isLoading={false} />
     <h2>React Date Picker in Redux {"\u2728"}</h2>
+    <HeaderFilter isLoading={false} />
+    <hr />
+    <h2>File Upload in Redux </h2>
+    <FileUploader />
+    <Alert stack={{ limit: 3 }} />
   </div>
 );
 

@@ -1,10 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { Field, reduxForm } from "redux-form";
-import { Row, Col } from "react-bootstrap";
 import moment from "moment";
-import DatePickerInput from "./common/form/datePickerInput";
-import appConfig from "./config";
+import DatePickerInput from "../common/form/datePickerInput";
+import appConfig from "../config";
 
 class HeaderFilter extends React.PureComponent {
   static propTypes = {
