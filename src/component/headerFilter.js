@@ -16,7 +16,7 @@ class HeaderFilter extends React.PureComponent {
   render() {
     return (
       <form>
-        <div class="form-group">
+        <div className="form-group">
           <Field
             className="date-input"
             label="From"
@@ -26,7 +26,7 @@ class HeaderFilter extends React.PureComponent {
             disabled={this.props.isLoading}
           />
         </div>
-        <div class="form-group">
+        <div className="form-group">
           <Field
             label="To"
             name="toDate"

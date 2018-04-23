@@ -8,6 +8,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 
 import HeaderFilter from "./component/headerFilter";
 import FileUploader from "./component/fileUploader";
+import RadioBtnGroupForm from "./component/radioBtnGroupForm";
 import { reducer as formReducer } from "redux-form";
 
 const reducers = combineReducers({
@@ -24,6 +25,9 @@ const App = () => (
     <hr />
     <h2>File Upload in Redux </h2>
     <FileUploader />
+    <hr />
+    <h2> Radio group button in Redux </h2>
+    <RadioBtnGroupForm />
     <Alert stack={{ limit: 3 }} />
   </div>
 );
